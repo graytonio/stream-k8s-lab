@@ -5,7 +5,7 @@
 - [x] GitOps CICD
     - [X] ArgoCD
 - [ ] Bare Metal Infrastructure
-    - [ ] Bare Metal LB (MetalLB)
+    - [X] Bare Metal LB (MetalLB)
     - [ ] Storage Class (Longhorn)
 - [ ] General Infrastructure
     - [ ] Ingress Controller (Traefik)
