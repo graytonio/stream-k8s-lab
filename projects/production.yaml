@@ -88,6 +88,8 @@ spec:
         repoURL: '{{ srcRepoURL }}'
         targetRevision: '{{ srcTargetRevision }}'
       syncPolicy:
+        syncOptions:
+          - CreateNamespace=true
         automated:
           allowEmpty: true
           prune: true
