@@ -4,9 +4,9 @@
 
 - [x] GitOps CICD
     - [X] ArgoCD
-- [ ] Bare Metal Infrastructure
+- [X] Bare Metal Infrastructure
     - [X] Bare Metal LB (MetalLB)
-    - [ ] Storage Class (Longhorn)
+    - [X] Storage Class (Longhorn)
 - [ ] General Infrastructure
     - [ ] Ingress Controller (Traefik)
     - [ ] DNS Server (PowerDNS/PiHole)
