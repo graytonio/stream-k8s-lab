@@ -8,6 +8,6 @@
     - [X] Bare Metal LB (MetalLB)
     - [X] Storage Class (Longhorn)
 - [ ] General Infrastructure
-    - [ ] Ingress Controller (Traefik)
+    - [X] Ingress Controller (Traefik)
     - [ ] DNS Server (PowerDNS/PiHole)
     - [ ] External DNS Controller (external-dns)
