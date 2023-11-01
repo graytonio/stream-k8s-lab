@@ -10,5 +10,5 @@ spec:
       match: Host(`traefik.example.com`)
       services:
         - kind: Service
-          name: longhorn-frontend
-          port: 80
+          name: traefik-dashboard
+          port: 8080
