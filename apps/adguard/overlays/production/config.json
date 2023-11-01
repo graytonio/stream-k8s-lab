@@ -1,0 +1,11 @@
+{
+    "appName": "adguard",
+    "userGivenName": "adguard",
+    "destNamespace": "adguard",
+    "destServer": "https://kubernetes.default.svc",
+    "srcPath": "apps/adguard/overlays/production",
+    "srcRepoURL": "https://github.com/graytonio/stream-k8s-lab.git",
+    "srcTargetRevision": "",
+    "labels": null,
+    "annotations": null
+  }

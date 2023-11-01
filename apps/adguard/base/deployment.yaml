@@ -1,0 +1,73 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: adguard-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: adguard
+  template:
+    metadata:
+      labels:
+        app: adguard
+    spec:
+      containers:
+      - name: adguard-home
+        image: adguard/adguardhome:v0.107.40
+        ports:
+        - containerPort: 53 #dns
+          name: dns-tcp
+          protocol: UDP
+        - containerPort: 53 #dns
+          name: dns-udp
+          protocol: TCP
+        - containerPort: 80 #web gui
+          name: http
+          protocol: TCP
+        - containerPort: 3000
+          name: http-init
+          protocol: TCP
+        volumeMounts:
+        - name: adguard-data
+          mountPath: /opt/adguardhome/work
+        - name: adguard-conf
+          mountPath: /opt/adguardhome/conf
+        resources:
+          limits:
+            cpu: "2"
+            memory: 1Gi
+          requests:
+            cpu: 100m
+            memory: 100Mi
+      volumes:
+      - name: adguard-data
+        persistentVolumeClaim:
+          claimName: adguard-data
+      - name: adguard-conf
+        persistentVolumeClaim:
+          claimName: adguard-conf
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: adguard-conf
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: "longhorn"
+  apiVersion: v1
+---
+kind: PersistentVolumeClaim
+metadata:
+  name: adguard-data
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 5Gi
+  storageClassName: "longhorn"
