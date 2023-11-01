@@ -9,6 +9,5 @@ spec:
     - kind: Rule
       match: Host(`traefik.example.com`)
       services:
-        - kind: Service
+        - kind: TraefikService
           name: traefik-dashboard
-          port: 8080
