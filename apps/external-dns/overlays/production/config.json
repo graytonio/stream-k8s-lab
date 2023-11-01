@@ -1,0 +1,11 @@
+{
+    "appName": "external-dns",
+    "userGivenName": "external-dns",
+    "destNamespace": "external-dns",
+    "destServer": "https://kubernetes.default.svc",
+    "srcPath": "apps/external-dns/overlays/production",
+    "srcRepoURL": "https://github.com/graytonio/stream-k8s-lab.git",
+    "srcTargetRevision": "",
+    "labels": null,
+    "annotations": null
+  }
