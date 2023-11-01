@@ -9,6 +9,16 @@ spec:
     - kind: Rule
       match: Host(`longhorn.example.com`)
       services:
-        - kind: Service
+        - kind: TraefikService
           name: longhorn-frontend
-          port: 80
+---
+apiVersion: traefik.io/v1alpha1
+kind: TraefikService
+metadata:
+  name: longhorn-frontend
+spec:
+  weighted:
+    services:
+      - name: longhorn-frontend
+        port: 80
+        weight: 1
