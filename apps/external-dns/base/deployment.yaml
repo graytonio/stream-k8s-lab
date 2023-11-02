@@ -54,8 +54,8 @@ spec:
           args:
             - --source=service # ingress is also possible
             - --domain-filter=example.com # (optional) limit to only example.com domains; change to match the zone created above.
-            - --provider=plugin
-            - --plugin-provider-url=http://localhost:8888
+            - --provider=webhook
+            - --webhook-provider-url=http://localhost:8888
           resources: 
             limits:
               cpu: "1"
