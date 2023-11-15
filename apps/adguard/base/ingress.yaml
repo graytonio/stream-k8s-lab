@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: adguard-dns-tcp
   annotations:
+    external-service: dns
     metallb.universe.tf/allow-shared-ip: "pihole-dns"
 spec:
   selector:
@@ -19,6 +20,7 @@ kind: Service
 metadata:
   name: adguard-dns-udp
   annotations:
+    external-service: dns
     metallb.universe.tf/allow-shared-ip: "pihole-dns"
 spec:
   selector:

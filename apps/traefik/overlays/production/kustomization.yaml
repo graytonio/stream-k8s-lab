@@ -13,3 +13,7 @@ patches:
       - op: add
         path: /subjects/0/namespace
         value: traefik
+  - target:
+      kind: Service
+      name: traefik-web
+    path: svc-external-ip.yaml
