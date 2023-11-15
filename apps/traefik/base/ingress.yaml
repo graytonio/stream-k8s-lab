@@ -3,7 +3,7 @@ kind: IngressRoute
 metadata:
   name: traefik-dashboard
   annotations:
-    external-dns.alpha.kubernetes.io/target: 192.168.5.202
+    external-dns.alpha.kubernetes.io/target: traefik.example.com
     kubernetes.io/ingress.class: traefik
 spec:
   entryPoints:
