@@ -16,4 +16,7 @@ patches:
   - target:
       kind: Service
       name: traefik-web
-    path: svc-external-ip.yaml
+    patch: |-
+      - op: add
+        path: /metadata/annotations/metallb.universe.tf\/loadBalancerIPs
+        value: 192.168.5.201
