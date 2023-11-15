@@ -18,5 +18,5 @@ patches:
       name: traefik-web
     patch: |-
       - op: add
-        path: /metadata/annotations/metallb.universe.tf\/loadBalancerIPs
+        path: /metadata/annotations/metallb.universe.tf~1loadBalancerIPs
         value: 192.168.5.201
