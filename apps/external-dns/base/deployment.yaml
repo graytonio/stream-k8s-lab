@@ -67,7 +67,7 @@ spec:
           env:
             - name: LOG_LEVEL
               value: debug
-            - name: ADGUARD_HOME
+            - name: ADGUARD_URL
               value: "http://adguard-web.adguard.svc.cluster.local/control/" # Note: URL should be in the format of http://adguard.home:3000/control/
             - name: ADGUARD_PASSWORD
               value: "external-password"
