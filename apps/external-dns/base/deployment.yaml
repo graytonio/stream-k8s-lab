@@ -63,13 +63,15 @@ spec:
               cpu: "50m"
               memory: "50Mi"
         - name: adguardhome-provider
-          image: ghcr.io/zekker6/external-dns-provider-adguard:latest
+          image: ghcr.io/muhlba91/external-dns-provider-adguard:v3.1.0
           env:
-            - name: ADGUARD_HOME_URL
+            - name: LOG_LEVEL
+              value: debug
+            - name: ADGUARD_HOME
               value: "http://adguard-web.adguard.svc.cluster.local/control/" # Note: URL should be in the format of http://adguard.home:3000/control/
-            - name: ADGUARD_HOME_PASS
+            - name: ADGUARD_PASSWORD
               value: "external-password"
-            - name: ADGUARD_HOME_USER
+            - name: ADGUARD_USER
               value: "external"
           resources: 
             limits:
