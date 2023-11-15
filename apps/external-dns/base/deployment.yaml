@@ -52,8 +52,8 @@ spec:
         - name: external-dns
           image: gcr.io/k8s-staging-external-dns/external-dns:v20231027-v0.13.6-142-gd8f408b8
           args:
-            - --source=service # ingress is also possible
-            - --domain-filter=example.com # (optional) limit to only example.com domains; change to match the zone created above.
+            - --source=traefik-proxy
+            - --domain-filter=example.com
             - --provider=webhook
             - --webhook-provider-url=http://localhost:8888
           resources: 
