@@ -11,3 +11,11 @@ patches:
       - op: add
         path: /metadata/annotations/metallb.universe.tf~1loadBalancerIPs
         value: 192.168.5.200
+  
+  - target:
+      kind: IngressRoute
+      name: adguard-dashboard
+    patch: |-
+      - op: add
+        path: /metadata/annotations/external-dns.alpha.kubernetes.io~1target
+        value: 192.168.5.201
