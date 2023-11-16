@@ -3,6 +3,8 @@ kind: IngressRoute
 metadata:
   name: argo-dashboard
   namespace: argocd
+  annotations:
+    external-dns.alpha.kubernetes.io/target: 192.168.5.201
 spec:
   entryPoints:
     - web
