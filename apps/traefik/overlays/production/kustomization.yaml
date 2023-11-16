@@ -23,4 +23,7 @@ patches:
 
   - target:
       kind: IngressRoute
-    path: ../../../../patches/ingress-route-auto-dns.yaml
+    patch: |-
+      - op: add
+        path: /metadata/annotations/external-dns.alpha.kubernetes.io~1target
+        value: 192.168.5.201
