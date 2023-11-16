@@ -7,7 +7,9 @@
 - [X] Bare Metal Infrastructure
     - [X] Bare Metal LB (MetalLB)
     - [X] Storage Class (Longhorn)
-- [ ] General Infrastructure
+- [X] General Infrastructure
     - [X] Ingress Controller (Traefik)
-    - [ ] DNS Server (PowerDNS/PiHole)
-    - [ ] External DNS Controller (external-dns)
+    - [X] DNS Server (PowerDNS/PiHole)
+    - [X] External DNS Controller (external-dns)
+    - [ ] Sealed Secrets (secret manager)
+    - [ ] Automatic SSL for traefik
