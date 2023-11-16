@@ -5,8 +5,8 @@ resources:
 
 patches:
   - target:
-    kind: IngressRoute
-  patch: |-
-    - op: add
-      path: /metadata/annotations/external-dns.alpha.kubernetes.io~1target
-      value: 192.168.5.201
+      kind: IngressRoute
+    patch: |-
+      - op: add
+        path: /metadata/annotations/external-dns.alpha.kubernetes.io~1target
+        value: 192.168.5.201
